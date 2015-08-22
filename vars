@@ -7,7 +7,7 @@ DB_IMAGE="${ELASTICSEARCH_IMAGE:-jumski/dokku-alt-elasticsearch}"
 DB_CONTAINER_LINK="elasticsearch"
 DB_CONTAINER_VOLUME="${ELASTICSEARCH_CONTAINER_VOLUME:-/var/lib/elasticsearch}"
 DB_PORT="${ELASTICSEARCH_PORT:-9200}"
-DB_COMMAND="${ELASTICSEARCH_COMMAND:-/usr/bin/start_elasticsearch}"
+DB_COMMAND="${ELASTICSEARCH_COMMAND:-/elasticsearch/bin/elasticsearch}"
 
 function elasticsearch_for_app() {
   verify_app_name "$1"
