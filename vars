@@ -3,7 +3,7 @@
 source "$(dirname $0)/../dokku_common"
 
 DB_ROOT="$DOKKU_ROOT/.elasticsearch"
-DB_IMAGE="${ELASTICSEARCH_IMAGE:-jumski/dokku-alt-elasticsearch-dockerfile}"
+DB_IMAGE="${ELASTICSEARCH_IMAGE:-jumski/dokku-alt-elasticsearch}"
 DB_CONTAINER_LINK="elasticsearch"
 DB_CONTAINER_VOLUME="${ELASTICSEARCH_CONTAINER_VOLUME:-/var/lib/elasticsearch}"
 DB_PORT="${ELASTICSEARCH_PORT:-9200}"
