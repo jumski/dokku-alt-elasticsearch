@@ -2,7 +2,7 @@
 
 source "$(dirname $0)/vars"
 
-if docker inspect "$DB_IMAGE" >/dev/null 2>/dev/null; then
+if docker images | grep -v "$DB_IMAGE" >/dev/null 2>/dev/null; then
 	script -q -c "docker pull '$DB_IMAGE'" /dev/null
 fi
 
